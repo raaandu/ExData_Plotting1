@@ -2,7 +2,7 @@
 # Reading data
 
 setwd("~/coursera/Project/Exploratory Data Analysis")
-power <- read.table("household_power_consumption.txt", header=T, sep=";", na.strings = "\color{red}{\verb|?|}?")
+power <- read.table("household_power_consumption.txt", header=T, sep=";")
 
 # Cleaning data
 
@@ -22,7 +22,6 @@ plot1 <- function() {
     hist(df$Global_active_power, main = paste("Global Active Power"), col="red", xlab="Global Active Power (kilowatts)")
     dev.copy(png, file="plot1.png", width=480, height=480)
     dev.off()
-    cat("Plot1.png has been saved in", getwd())
 }
 
 # Plot 2
